@@ -1,13 +1,5 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
   "name": "procon",
-=======
-  "name": "procq",
->>>>>>> 6dc8cf2 (first commit)
-=======
-  "name": "procon",
->>>>>>> a927d70 (Refactor: UI, responsiveness and usability adjustments)
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,14 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "@radix-ui/react-accordion": "^1.2.12",
-=======
->>>>>>> 6dc8cf2 (first commit)
-=======
-    "@radix-ui/react-accordion": "^1.2.12",
->>>>>>> a927d70 (Refactor: UI, responsiveness and usability adjustments)
     "@radix-ui/react-alert-dialog": "^1.1.14",
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-dialog": "^1.1.14",
@@ -48,10 +33,7 @@
     "dayjs": "^1.11.13",
     "dotenv": "^16.5.0",
     "drizzle-orm": "^0.43.1",
-<<<<<<< HEAD
     "jspdf": "^3.0.2",
-=======
->>>>>>> 6dc8cf2 (first commit)
     "lucide-react": "^0.514.0",
     "next": "15.3.2",
     "next-safe-action": "^7.10.8",
