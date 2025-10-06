@@ -1,0 +1,47 @@
+import { z } from "zod";
+
+export const ErrorTypes = {
+  UNAUTHENTICATED: "UNAUTHENTICATED",
+  DUPLICATE: "DUPLICATE"
+} as const;
+
+export const ErrorMessages = {
+  [ErrorTypes.UNAUTHENTICATED]: "Usuário não autenticado.",
+  [ErrorTypes.DUPLICATE]: "Já existe um arquivamento para este processo.",
+} as const;
+
+export type ErrorType = keyof typeof ErrorTypes;
+
+export const UpdateTicketSchema = z.object({
+  id: z.string().min(1, "ID é obrigatório"),
+  caseNumber: z.string().optional(),
+  consumerName: z.string().optional(),
+  supplierName: z.string().optional(),
+  processFolderNumber: z.string().optional(),
+  numberOfPages: z.number().optional(),
+<<<<<<< HEAD
+  filingDate: z.string().optional(),
+=======
+  filingDate: z.date().optional(),
+>>>>>>> 6dc8cf2 (first commit)
+});
+
+export const CreateTicketSchema = z.object({
+  caseNumber: z.string().min(1, "Número do processo é obrigatório"),
+  consumerName: z.string().min(1, "Nome do consumidor é obrigatório"),
+  supplierName: z.string().min(1, "Nome do fornecedor é obrigatório"),
+  processFolderNumber: z.string().min(1, "Número da pasta do processo é obrigatório"),
+  numberOfPages: z.number().min(1, "Número de páginas é obrigatório"),
+<<<<<<< HEAD
+  filingDate: z.string().min(1, "Data de arquivamento é obrigatória."),
+=======
+  filingDate: z.date({
+    required_error: "Data de arquivamento é obrigatória.",
+    invalid_type_error: "Data inválida.",
+  }),
+>>>>>>> 6dc8cf2 (first commit)
+});
+
+
+export type UpdateTicketSchema = z.infer<typeof UpdateTicketSchema>;
+export type CreateTicketSchema = z.infer<typeof CreateTicketSchema>;
