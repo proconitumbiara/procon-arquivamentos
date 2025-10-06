@@ -11,11 +11,7 @@ export const AccessDenied = () => {
 
     useEffect(() => {
         const timeout = setTimeout(() => {
-<<<<<<< HEAD
             router.push("/archiving");
-=======
-            router.push("/users/professionals-services");
->>>>>>> 6dc8cf2 (first commit)
         }, 3000);
 
         return () => clearTimeout(timeout);

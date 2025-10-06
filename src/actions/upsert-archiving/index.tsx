@@ -70,11 +70,7 @@ export const upsertArchivedProcess = actionClient
                     processFolderNumber: parsedInput.processFolderNumber,
                     numberOfPages: parsedInput.numberOfPages,
                     filingDate: parsedInput.filingDate
-<<<<<<< HEAD
-                        ? parsedInput.filingDate
-=======
                         ? new Date(parsedInput.filingDate)
->>>>>>> 6dc8cf2 (first commit)
                         : existing.filingDate,
                     updatedAt: new Date(),
                 })
@@ -115,14 +111,8 @@ export const upsertArchivedProcess = actionClient
                     processFolderNumber: parsedInput.processFolderNumber,
                     numberOfPages: parsedInput.numberOfPages,
                     filingDate: parsedInput.filingDate
-<<<<<<< HEAD
-                        ? parsedInput.filingDate
-                        : new Date().toISOString().split('T')[0],
-                    status: "archived",
-=======
                         ? new Date(parsedInput.filingDate)
                         : new Date(),
->>>>>>> 6dc8cf2 (first commit)
                     createdAt: new Date(),
                     updatedAt: new Date(),
                 })

@@ -2,15 +2,7 @@
 
 import { Slot } from "@radix-ui/react-slot"
 import { cva, VariantProps } from "class-variance-authority"
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ChevronLeft, ChevronRight } from "lucide-react"
-=======
-import { Menu, X } from "lucide-react"
->>>>>>> 6dc8cf2 (first commit)
-=======
-import { ChevronLeft, ChevronRight } from "lucide-react"
->>>>>>> a927d70 (Refactor: UI, responsiveness and usability adjustments)
 import * as React from "react"
 
 import { Button } from "@/components/ui/button"
@@ -281,15 +273,7 @@ function SidebarTrigger({
       }}
       {...props}
     >
-<<<<<<< HEAD
-<<<<<<< HEAD
       {state === "expanded" ? <ChevronLeft /> : <ChevronRight />}
-=======
-      {state === "expanded" ? <X /> : <Menu />}
->>>>>>> 6dc8cf2 (first commit)
-=======
-      {state === "expanded" ? <ChevronLeft /> : <ChevronRight />}
->>>>>>> a927d70 (Refactor: UI, responsiveness and usability adjustments)
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   )
@@ -358,15 +342,7 @@ function SidebarHeader({ className, ...props }: React.ComponentProps<"div">) {
     >
       <div className="flex-1 flex flex-col items-center min-w-0 group-data-[state=collapsed]:hidden">
         <h1 className="text-xl font-bold text-primary">PROCON</h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <span className="text-sm text-muted-foreground">Sistema de arquivamentos</span>
-=======
-        <span className="text-sm text-muted-foreground">Itumbiara - GO</span>
->>>>>>> 6dc8cf2 (first commit)
-=======
-        <span className="text-sm text-muted-foreground">Sistema de arquivamentos</span>
->>>>>>> a927d70 (Refactor: UI, responsiveness and usability adjustments)
       </div>
       <SidebarTrigger />
     </div>

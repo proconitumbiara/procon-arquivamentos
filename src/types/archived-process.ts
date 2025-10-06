@@ -5,12 +5,8 @@ export interface ArchivedProcess {
     supplierName: string;
     processFolderNumber: string;
     numberOfPages: number;
-<<<<<<< HEAD
-    filingDate: string; // Formato YYYY-MM-DD
-    status: "archived" | "filed_and_checked";
-=======
     filingDate?: Date | null;
->>>>>>> 6dc8cf2 (first commit)
+    status: "archived" | "filed_and_checked";
     createdAt?: Date | null;
     updatedAt?: Date | null;
 }

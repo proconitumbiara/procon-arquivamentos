@@ -17,10 +17,6 @@ import {
     FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-<<<<<<< HEAD
-import { formatName } from "@/lib/utils";
-=======
->>>>>>> 6dc8cf2 (first commit)
 
 const formSchema = z.object({
     caseNumber: z.string().min(1, "Obrigatório"),
@@ -68,28 +64,12 @@ export default function AddArchivedProcessForm({ onSuccess }: AddArchivedProcess
         onError: () => toast.error("Erro ao adicionar arquivamento."),
     });
 
-<<<<<<< HEAD
-    const onSubmit = (values: FormValues) => {
-        // Converter Date para string no formato YYYY-MM-DD
-        const valuesWithStringDate = {
-            ...values,
-            filingDate: values.filingDate.toISOString().split('T')[0]
-        };
-        execute(valuesWithStringDate);
-    };
-
-    return (
-        <div className="flex flex-col w-full h-full p-2">
-            <h2 className="text-lg font-semibold">Novo Arquivamento</h2>
-            <p className="text-sm text-muted-foreground mb-4">
-=======
     const onSubmit = (values: FormValues) => execute(values);
 
     return (
         <div className="flex flex-col w-full h-full p-2">
             <h2 className="text-lg font-semibold mb-4">Novo Arquivamento</h2>
             <p className="text-sm text-muted-foreground mb-6">
->>>>>>> 6dc8cf2 (first commit)
                 Adicione um novo arquivamento
             </p>
             <Form {...form}>
@@ -118,17 +98,11 @@ export default function AddArchivedProcessForm({ onSuccess }: AddArchivedProcess
                                     <Input
                                         placeholder="Nome do consumidor"
                                         {...field}
-<<<<<<< HEAD
-                                        onBlur={(e) => {
-                                            const formattedValue = formatName(e.target.value);
-                                            field.onChange(formattedValue);
-=======
                                         onChange={(e) => {
                                             const value = e.target.value
                                                 .toLowerCase()
                                                 .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitaliza
                                             field.onChange(value);
->>>>>>> 6dc8cf2 (first commit)
                                         }}
                                     />
                                 </FormControl>
@@ -147,17 +121,11 @@ export default function AddArchivedProcessForm({ onSuccess }: AddArchivedProcess
                                     <Input
                                         placeholder="Nome do fornecedor"
                                         {...field}
-<<<<<<< HEAD
-                                        onBlur={(e) => {
-                                            const formattedValue = formatName(e.target.value);
-                                            field.onChange(formattedValue);
-=======
                                         onChange={(e) => {
                                             const value = e.target.value
                                                 .toLowerCase()
                                                 .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitaliza
                                             field.onChange(value);
->>>>>>> 6dc8cf2 (first commit)
                                         }}
                                     />
                                 </FormControl>
@@ -172,15 +140,9 @@ export default function AddArchivedProcessForm({ onSuccess }: AddArchivedProcess
                         name="processFolderNumber"
                         render={({ field }) => (
                             <FormItem>
-<<<<<<< HEAD
-                                <FormLabel>Nº da Caixa</FormLabel>
-                                <FormControl>
-                                    <Input placeholder="Número da caixa" {...field} />
-=======
                                 <FormLabel>Nº da Pasta</FormLabel>
                                 <FormControl>
                                     <Input placeholder="Número da pasta" {...field} />
->>>>>>> 6dc8cf2 (first commit)
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -206,14 +168,7 @@ export default function AddArchivedProcessForm({ onSuccess }: AddArchivedProcess
                         name="filingDate"
                         render={({ field }) => (
                             <FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 <FormLabel>Data de arquivamento</FormLabel>
-=======
->>>>>>> 6dc8cf2 (first commit)
-=======
-                                <FormLabel>Data de arquivamento</FormLabel>
->>>>>>> a927d70 (Refactor: UI, responsiveness and usability adjustments)
                                 <FormControl>
                                     <Input
                                         type="date"

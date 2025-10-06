@@ -57,7 +57,6 @@ const LoginForm = () => {
 
 
   return (
-<<<<<<< HEAD
     <div className="flex items-center justify-center w-full h-full min-h-screen bg-background p-4">
       <Card className="w-full max-w-md h-auto overflow-hidden">
         <CardContent className="p-4 md:p-6 lg:p-8 text-center flex flex-col justify-center h-full">
@@ -128,77 +127,6 @@ const LoginForm = () => {
           </Button>
         </CardContent>
       </Card>
-=======
-    <div className="flex w-full h-full">
-      {/* Lado esquerdo com logo */}
-      <div className="flex items-center justify-center w-1/2 h-full bg-background">
-        <Image src="/Logo.svg" alt="Logo" width={400} height={400} priority />
-      </div>
-
-      {/* Lado direito com card */}
-      <div className="flex items-center justify-center w-1/2 h-full bg-background">
-        <Card className="w-2/3 h-auto overflow-hidden">
-          <CardContent className="p-6 md:p-8 text-center flex flex-col justify-center h-full">
-            <Form {...formLogin}>
-              <form onSubmit={formLogin.handleSubmit(onSubmitLogin)} className="space-y-4">
-                <h1 className="text-2xl font-bold text-foreground">
-                  Faça login
-                </h1>
-                <div className="space-y-4">
-                  <FormField
-                    control={formLogin.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-foreground">Email</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Digite seu email" {...field} className="bg-background shadow-md focus-visible:ring-0 focus-visible:ring-offset-0 text-foreground" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={formLogin.control}
-                    name="password"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-foreground">Senha</FormLabel>
-                        <FormControl>
-                          <div className="relative">
-                            <Input
-                              type="password"
-                              placeholder="Digite sua senha"
-                              {...field}
-                              className="bg-background shadow-md focus-visible:ring-0 focus-visible:ring-offset-0 text-foreground pr-10"
-                            />
-                          </div>
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-                <CardFooter className="p-0">
-                  <Button
-                    type="submit"
-                    className="w-full"
-                    disabled={formLogin.formState.isSubmitting}
-                  >
-                    {formLogin.formState.isSubmitting ? "Entrando..." : "Entrar"}
-                  </Button>
-                </CardFooter>
-              </form>
-            </Form>
-            <Button variant="ghost" className="hover:bg-transparent font-extralight hover:text-primary hover:font-bold">
-              <Link href="/sign-up">
-                Cadastre-se no sistema
-              </Link>
-            </Button>
-          </CardContent>
-        </Card>
-      </div>
->>>>>>> 6dc8cf2 (first commit)
     </div>
   )
 }

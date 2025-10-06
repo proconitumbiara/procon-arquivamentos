@@ -9,11 +9,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-=======
-import { Card, CardContent } from "@/components/ui/card";
->>>>>>> 6dc8cf2 (first commit)
 import {
     Form,
     FormControl,
@@ -24,10 +20,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { authClient } from "@/lib/auth.client";
-<<<<<<< HEAD
-import { formatName } from "@/lib/utils";
-=======
->>>>>>> 6dc8cf2 (first commit)
 
 const registerSchema = z.object({
     name: z.string().trim().min(1, { message: "Nome é obrigatório" }),
@@ -81,7 +73,6 @@ export function SignUpForm() {
     }
 
     return (
-<<<<<<< HEAD
         <div className="flex items-center justify-center w-full h-full min-h-screen bg-background p-4">
             <Card className="w-full max-w-md h-auto overflow-hidden">
                 <CardContent className="p-4 md:p-6 lg:p-8 text-center flex flex-col justify-center h-full">
@@ -99,48 +90,18 @@ export function SignUpForm() {
                                 Cadastro de Usuário
                             </h1>
                             <div className="space-y-4">
-=======
-        <div className="flex w-full h-full">
-            {/* Lado esquerdo com logo */}
-            <div className="flex items-center justify-center w-1/2 h-ful">
-                <Image src="/Logo.svg" alt="Logo" width={400} height={400} priority />
-            </div>
-
-            {/* Lado direito com card */}
-            <div className="flex items-center justify-center w-1/2 h-full">
-                <Card className="w-2/3 h-auto overflow-hidden">
-                    <CardContent className="p-6 md:p-8 text-center flex flex-col justify-center h-full">
-                        <Form {...formRegister}>
-                            <form
-                                onSubmit={formRegister.handleSubmit(onSubmitRegister)}
-                                className="flex flex-col gap-6 h-full justify-center"
-                            >
-                                <h1 className="text-2xl font-bold text-foreground">
-                                    Cadastro de Usuário
-                                </h1>
-
->>>>>>> 6dc8cf2 (first commit)
                                 <FormField
                                     control={formRegister.control}
                                     name="name"
                                     render={({ field }) => (
                                         <FormItem>
-<<<<<<< HEAD
                                             <FormLabel className="text-foreground">Nome</FormLabel>
                                             <FormControl>
                                                 <Input
                                                     placeholder="Digite seu nome"
-                                                    onBlur={(e) => {
-                                                        const formattedValue = formatName(e.target.value);
-                                                        field.onChange(formattedValue);
-                                                    }}
+                                                    {...field}
                                                     className="bg-background shadow-md focus-visible:ring-0 focus-visible:ring-offset-0 text-foreground"
                                                 />
-=======
-                                            <FormLabel>Nome:</FormLabel>
-                                            <FormControl>
-                                                <Input {...field} placeholder="Digite seu nome" />
->>>>>>> 6dc8cf2 (first commit)
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
@@ -152,7 +113,6 @@ export function SignUpForm() {
                                     name="email"
                                     render={({ field }) => (
                                         <FormItem>
-<<<<<<< HEAD
                                             <FormLabel className="text-foreground">Email</FormLabel>
                                             <FormControl>
                                                 <Input
@@ -160,11 +120,6 @@ export function SignUpForm() {
                                                     placeholder="Digite seu email"
                                                     className="bg-background shadow-md focus-visible:ring-0 focus-visible:ring-offset-0 text-foreground"
                                                 />
-=======
-                                            <FormLabel>Email:</FormLabel>
-                                            <FormControl>
-                                                <Input {...field} placeholder="Digite seu email" />
->>>>>>> 6dc8cf2 (first commit)
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
@@ -176,7 +131,6 @@ export function SignUpForm() {
                                     name="password"
                                     render={({ field }) => (
                                         <FormItem>
-<<<<<<< HEAD
                                             <FormLabel className="text-foreground">Senha</FormLabel>
                                             <FormControl>
                                                 <div className="relative">
@@ -187,37 +141,20 @@ export function SignUpForm() {
                                                         className="bg-background shadow-md focus-visible:ring-0 focus-visible:ring-offset-0 text-foreground pr-10"
                                                     />
                                                 </div>
-=======
-                                            <FormLabel>Senha:</FormLabel>
-                                            <FormControl>
-                                                <Input
-                                                    {...field}
-                                                    type="password"
-                                                    placeholder="Crie sua senha"
-                                                />
->>>>>>> 6dc8cf2 (first commit)
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
                                     )}
                                 />
-<<<<<<< HEAD
                             </div>
                             <CardFooter className="p-0">
                                 <Button
                                     type="submit"
                                     className="w-full text-white"
-=======
-
-                                <Button
-                                    type="submit"
-                                    className="w-full"
->>>>>>> 6dc8cf2 (first commit)
                                     disabled={formRegister.formState.isSubmitting}
                                 >
                                     {formRegister.formState.isSubmitting ? "Cadastrando..." : "Cadastrar"}
                                 </Button>
-<<<<<<< HEAD
                             </CardFooter>
                         </form>
                     </Form>
@@ -228,18 +165,6 @@ export function SignUpForm() {
                     </Button>
                 </CardContent>
             </Card>
-=======
-                            </form>
-                        </Form>
-                        <Button variant="ghost" className="hover:bg-transparent font-extralight hover:text-primary hover:font-bold">
-                            <Link href="/">
-                                Fazer login no sistema
-                            </Link>
-                        </Button>
-                    </CardContent>
-                </Card>
-            </div>
->>>>>>> 6dc8cf2 (first commit)
         </div>
     );
 }

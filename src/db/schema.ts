@@ -1,9 +1,5 @@
 import {
   boolean,
-<<<<<<< HEAD
-  date,
-=======
->>>>>>> 6dc8cf2 (first commit)
   integer,
   pgTable,
   text,
@@ -70,12 +66,8 @@ export const archivedProcessesTable = pgTable("archived_processes", {
   supplierName: text("supplier_name").notNull(),
   processFolderNumber: text("process_folder_number").notNull(),
   numberOfPages: integer("number_of_pages").notNull(),
-<<<<<<< HEAD
-  filingDate: date("filing_date").notNull(),
-  status: text("status").notNull().default("archived"),
-=======
   filingDate: timestamp("filing_date").notNull(),
->>>>>>> 6dc8cf2 (first commit)
+  status: text("status").notNull().default("archived"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at")
     .defaultNow()

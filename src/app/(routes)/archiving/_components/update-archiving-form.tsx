@@ -17,10 +17,6 @@ import {
     FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-<<<<<<< HEAD
-import { formatName } from "@/lib/utils";
-=======
->>>>>>> 6dc8cf2 (first commit)
 import { ArchivedProcess } from "@/types/archived-process";
 
 const formSchema = z.object({
@@ -29,11 +25,7 @@ const formSchema = z.object({
     supplierName: z.string().min(1, "Obrigatório"),
     processFolderNumber: z.string().min(1, "Obrigatório"),
     numberOfPages: z.coerce.number().min(1, "Obrigatório"),
-<<<<<<< HEAD
-    filingDate: z.string().min(1, "Obrigatório"),
-=======
     filingDate: z.date({ required_error: "Obrigatório" }),
->>>>>>> 6dc8cf2 (first commit)
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -52,11 +44,7 @@ export default function UpdateArchivedProcessForm({ process, onSuccess }: Update
             supplierName: process.supplierName,
             processFolderNumber: process.processFolderNumber,
             numberOfPages: process.numberOfPages,
-<<<<<<< HEAD
-            filingDate: process.filingDate,
-=======
             filingDate: process.filingDate || new Date(),
->>>>>>> 6dc8cf2 (first commit)
         },
     });
 
@@ -98,17 +86,11 @@ export default function UpdateArchivedProcessForm({ process, onSuccess }: Update
                                     <Input
                                         placeholder="Nome do consumidor"
                                         {...field}
-<<<<<<< HEAD
-                                        onBlur={(e) => {
-                                            const formattedValue = formatName(e.target.value);
-                                            field.onChange(formattedValue);
-=======
                                         onChange={(e) => {
                                             const value = e.target.value
                                                 .toLowerCase()
                                                 .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitaliza
                                             field.onChange(value);
->>>>>>> 6dc8cf2 (first commit)
                                         }}
                                     />
                                 </FormControl>
@@ -127,17 +109,11 @@ export default function UpdateArchivedProcessForm({ process, onSuccess }: Update
                                     <Input
                                         placeholder="Nome do fornecedor"
                                         {...field}
-<<<<<<< HEAD
-                                        onBlur={(e) => {
-                                            const formattedValue = formatName(e.target.value);
-                                            field.onChange(formattedValue);
-=======
                                         onChange={(e) => {
                                             const value = e.target.value
                                                 .toLowerCase()
                                                 .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitaliza
                                             field.onChange(value);
->>>>>>> 6dc8cf2 (first commit)
                                         }}
                                     />
                                 </FormControl>
@@ -146,24 +122,14 @@ export default function UpdateArchivedProcessForm({ process, onSuccess }: Update
                         )}
                     />
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6dc8cf2 (first commit)
                     <FormField
                         control={form.control}
                         name="processFolderNumber"
                         render={({ field }) => (
                             <FormItem>
-<<<<<<< HEAD
-                                <FormLabel>Nº da Caixa</FormLabel>
-                                <FormControl>
-                                    <Input placeholder="Número da caixa" {...field} />
-=======
                                 <FormLabel>Nº da Pasta</FormLabel>
                                 <FormControl>
                                     <Input placeholder="Número da pasta" {...field} />
->>>>>>> 6dc8cf2 (first commit)
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -189,13 +155,7 @@ export default function UpdateArchivedProcessForm({ process, onSuccess }: Update
                         name="filingDate"
                         render={({ field }) => (
                             <FormItem>
-<<<<<<< HEAD
                                 <FormLabel>Data de Arquivamento</FormLabel>
-                                <FormControl>
-                                    <Input
-                                        type="date"
-                                        {...field}
-=======
                                 <FormControl>
                                     <Input
                                         type="date"
@@ -203,7 +163,6 @@ export default function UpdateArchivedProcessForm({ process, onSuccess }: Update
                                         onChange={(e) =>
                                             field.onChange(e.target.value ? new Date(e.target.value) : null)
                                         }
->>>>>>> 6dc8cf2 (first commit)
                                     />
                                 </FormControl>
                                 <FormMessage />
