@@ -8,8 +8,12 @@ import * as schema from "@/db/schema";
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
     provider: "pg",
-    usePlural: true,
-    schema,
+    schema: {
+      user: schema.usersTable,
+      session: schema.sessionsTable,
+      account: schema.accountsTable,
+      verification: schema.verificationsTable,
+    },
   }),
   trustedOrigins: ["http://localhost:3000", "http://192.168.1.12:3000"],
   plugins: [
@@ -22,18 +26,6 @@ export const auth = betterAuth({
       };
     }),
   ],
-  user: {
-    modelName: "usersTable",
-  },
-  session: {
-    modelName: "sessionsTable",
-  },
-  account: {
-    modelName: "accountsTable",
-  },
-  verification: {
-    modelName: "verificationsTable",
-  },
   emailAndPassword: {
     enabled: true,
   },

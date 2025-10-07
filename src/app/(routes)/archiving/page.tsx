@@ -6,6 +6,8 @@ import { PageContainer, PageContent, PageDescription, PageHeader, PageHeaderCont
 import { db } from "@/db";
 import { auth } from "@/lib/auth";
 import { ArchivedProcess } from "@/types/archived-process";
+
+import GenerateBoxPDF from "./_components/generate-box-pdf";
 import ArchivedProcessSearch from "./_components/search-filings";
 
 
@@ -40,6 +42,8 @@ const Home = async () => {
                         <ArchivedProcessSearch filings={typedFilings} />
                     </div>
                 </div>
+
+                <GenerateBoxPDF />
             </PageContent>
         </PageContainer>
     );
