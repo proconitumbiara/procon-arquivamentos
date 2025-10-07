@@ -107,7 +107,7 @@ export default function ArchivedProcessSearch({ filings }: ArchivedProcessSearch
                                     {/* Botão de detalhes */}
                                     <Dialog>
                                         <DialogTrigger asChild>
-                                            <Button variant="secondary" size="sm" className="mt-2">
+                                            <Button variant="default" size="sm" className="mt-2">
                                                 Ver detalhes
                                             </Button>
                                         </DialogTrigger>
