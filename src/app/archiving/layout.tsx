@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <SidebarProvider>
             <AppSidebar />
             <main className="w-full">
-                <div className="absolute right-2 top-2 items-center">
+                <div className="absolute right-2 top-2 items-center flex justify-center">
                     <ThemeToggle />
                     <LogoutButton />
                 </div>

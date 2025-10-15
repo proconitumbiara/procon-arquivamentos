@@ -103,7 +103,7 @@ export default function ReportGenerator() {
     return (
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
-                <Button variant="outline" className="gap-2">
+                <Button variant="outline" className="gap-2 hover:bg-primary hover:text-white">
                     <FileText className="h-4 w-4" />
                     Gerar Relatório
                 </Button>

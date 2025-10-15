@@ -81,6 +81,7 @@ const Home = async () => {
           totalConferenceActions={dashboard.totalConferenceActions}
           averageTreatmentDuration={dashboard.averageArchivingsPerUser}
         />
+        <ReportGenerator />
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <TopProfessionals
             professionals={users}

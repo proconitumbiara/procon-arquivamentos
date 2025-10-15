@@ -1,15 +1,16 @@
 // components/custom-pagination.tsx
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+
 import {
     Pagination as ShadPagination,
     PaginationContent,
+    PaginationEllipsis,
     PaginationItem,
     PaginationLink,
     PaginationNext,
     PaginationPrevious,
-    PaginationEllipsis,
 } from "@/components/ui/pagination";
 
 interface CustomPaginationProps {

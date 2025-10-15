@@ -46,7 +46,7 @@ const LoginForm = () => {
     }, {
       onSuccess: () => {
         toast.success("Login realizado com sucesso")
-        router.push("/archiving")
+        router.push("/archiving/register")
       },
       onError: () => {
         toast.error("Email ou senha inválidos")
@@ -121,7 +121,7 @@ const LoginForm = () => {
             </form>
           </Form>
           <Button variant="link" className="hover:bg-transparent font-extralight hover:text-primary hover:font-bold mt-4">
-            <Link href="/sign-up">
+            <Link href="/auth/sign-up">
               Cadastre-se no sistema
             </Link>
           </Button>

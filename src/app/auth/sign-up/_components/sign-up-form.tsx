@@ -159,7 +159,7 @@ export function SignUpForm() {
                         </form>
                     </Form>
                     <Button variant="link" className="hover:bg-transparent font-extralight hover:text-primary hover:font-bold mt-4">
-                        <Link href="/">
+                        <Link href="/auth">
                             Fazer login no sistema
                         </Link>
                     </Button>
