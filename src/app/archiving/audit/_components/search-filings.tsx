@@ -119,8 +119,15 @@ export default function ArchivedProcessSearch({ filings }: ArchivedProcessSearch
         }
     };
 
-    const formatDate = (date?: Date | string | null) =>
-        date ? new Date(date).toLocaleDateString() : "-";
+    const formatDate = (date?: Date | string | null) => {
+        if (!date) return "-";
+
+        // Usar a mesma lógica do update-archiving-form
+        const dateObj = typeof date === "string" ? new Date(date) : date;
+        const isoString = dateObj.toISOString().split("T")[0]; // YYYY-MM-DD
+        const [year, month, day] = isoString.split("-");
+        return `${day}/${month}/${year}`;
+    };
 
     const totalPages = Math.ceil(filteredResults.length / resultsPerPage);
 
